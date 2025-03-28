@@ -16,7 +16,7 @@ body {
     text-align: center;
 }
 
-h1 {
+h1, h2 {
     margin-bottom: 20px;
 }
 
@@ -30,7 +30,7 @@ input {
 
 button {
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: #1db954; /* Spotify green */
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -38,7 +38,12 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #1ed760; /* Lighter Spotify green */
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
 }
 
 #results {
@@ -46,3 +51,120 @@ button:hover {
     text-align: left;
 }
 
+.song {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 4px;
+    background-color: #fafafa;
+}
+
+.song h3 {
+    margin: 0 0 5px;
+    font-size: 1.2em;
+    color: #1db954;
+}
+
+.song p {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+.song a {
+    color: #1db954;
+    text-decoration: none;
+}
+
+.song a:hover {
+    text-decoration: underline;
+}
+
+.add-to-playlist {
+    margin-top: 10px;
+    background-color: #28a745;
+}
+
+.add-to-playlist:hover {
+    background-color: #218838;
+}
+
+#playlistSection {
+    margin-top: 30px;
+    text-align: left;
+}
+
+#playlist {
+    list-style: none;
+    padding: 0;
+}
+
+#playlist li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.remove-song {
+    background-color: #dc3545;
+}
+
+.remove-song:hover {
+    background-color: #c82333;
+}
+
+#clearPlaylist {
+    margin-top: 10px;
+    background-color: #ffc107;
+}
+
+#clearPlaylist:hover {
+    background-color: #e0a800;
+}
+
+.spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    color: #1db954;
+}
+
+.spinner::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #1db954;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-right: 10px;
+}
+
+#results p.error {
+    color: red;
+    font-weight: bold;
+}
+
+.api-note {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+@media (max-width: 600px) {
+    .container {
+        max-width: 100%;
+        margin: 20px;
+        padding: 15px;
+    }
+    input {
+        width: 100%;
+    }
+}
