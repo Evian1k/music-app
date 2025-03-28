@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skiza Ngoma</title>
-    <link rel="stylesheet" href="style.css">
+    <title>JioSaavn Song Search</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-        <input type="text" id="searchBar" placeholder="search for songs,playlists...">
-        <button onclick="search">search</button>
-        <div id="Results"></div>
-  <script src="index.js"></script>  
+    <div class="container">
+        <h1>JioSaavn Song Search</h1>
+        <input type="text" id="searchInput" placeholder="Enter song name or link">
+        <button id="searchButton">Search</button>
+        <div id="results"></div>
+    </div>
+    <script src="app.js"></script>
 </body>
 </html>
